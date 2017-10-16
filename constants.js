@@ -1,4 +1,6 @@
 export const BOT_INVOKE_COMMAND = "e!";
 export const emoteMap = {
-    'eriri': "eriri.gif"
+    bakaKaren: "bakaKaren.png",
+    headTilt: "headTilt.png",
+    karenZoom: "karenZoom.png"
 };
