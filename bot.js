@@ -28,19 +28,24 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     if(message.startsWith(BOT_INVOKE_COMMAND)) {
         logger.info("Bot invoked");
         let userCommandArray = getUserCommandFromMessage(BOT_INVOKE_COMMAND, message);
-        bot.uploadFile(sendEmoteToServer(user, channelID, userCommandArray[0]), function(error, response) {
-            if(error) {
-                bot.sendMessage({
-                    to: channelID,
-                    message: "Sorry could not find requested emote"
-                })
-            }
 
-            console.log(evt.d.id);
-            bot.deleteMessage({
-                channelID: channelID,
-                messageID: evt.d.id
+        if(userCommandArray[0] === "help") {
+            bot.sendMessage({
+                to: channelID,
+                message: "Usage : e![emoteName], e.g, e!bakaKaren. Emote list at https://github.com/Vergo777/discord-emote-bot/tree/master/emotes"
             })
-        });
+        } else {
+            bot.uploadFile(sendEmoteToServer(user, channelID, userCommandArray[0]), function(error, response) {
+                if(error) {
+                    logger.info("Could not find requested emote"); 
+                }
+
+                console.log(evt.d.id);
+                bot.deleteMessage({
+                    channelID: channelID,
+                    messageID: evt.d.id
+                })
+            });
+        }
     }
 });

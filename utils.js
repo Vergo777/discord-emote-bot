@@ -12,7 +12,7 @@ export function sendEmoteToServer(user, channelID, emoteName) {
         return {
             to: channelID,
             file: './emotes/' + emoteMap[emoteName],
-            message: user + ' : '
+            message: user + ': '
         }
     }
 
