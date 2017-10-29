@@ -7,5 +7,6 @@ export const emoteMap = {
     kannaHuh: "kannaHuh.png",
     meguHappy: "meguHappy.png",
     nepWut: "nepWut.png",
-    miiaThicc: "miiaThicc.png"
+    miiaThicc: "miiaThicc.png",
+    alicePout: "alicePout.png"
 };
