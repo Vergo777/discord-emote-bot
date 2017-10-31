@@ -8,5 +8,10 @@ export const emoteMap = {
     meguHappy: "meguHappy.png",
     nepWut: "nepWut.png",
     miiaThicc: "miiaThicc.png",
-    alicePout: "alicePout.png"
+    alicePout: "alicePout.png",
+    kongouDisgusted: "kongouDisgusted.png",
+    kongouEhehe: "kongouEhehe.png",
+    kongouYay: "kongouYay.png",
+    canYouNotDess: "canYouNotDess.png",
+    kongouBongo: "kongouBongo.png"
 };
